@@ -58,9 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
               keyboardType:
                   const TextInputType.numberWithOptions(decimal: true),
               decoration: const InputDecoration(
-                  border: OutlineInputBorder(), hintText: 'Height (cm)'
-                  //labelText: 'Height (cm)'
-                  ),
+                  border: OutlineInputBorder(), hintText: 'Height (cm)'),
               controller: _heightController,
             ),
             SizedBox(
@@ -70,9 +68,7 @@ class _MyHomePageState extends State<MyHomePage> {
               keyboardType:
                   const TextInputType.numberWithOptions(decimal: true),
               decoration: const InputDecoration(
-                  //labelText: 'Weight (kg)',
-                  border: OutlineInputBorder(),
-                  hintText: 'kg'),
+                  border: OutlineInputBorder(), hintText: 'kg'),
               controller: _weightController,
             ),
             Spacer(),
@@ -114,7 +110,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
     if (height == null || height <= 0 || weight == null || weight <= 0) {
       setState(() {
-        message = "Incorrect data";
+        message = "Incorrect data!";
         bmi = 0;
       });
       return;
@@ -132,6 +128,5 @@ class _MyHomePageState extends State<MyHomePage> {
         message = 'You are obese';
       }
     });
-    print(message);
   }
 }

@@ -52,7 +52,8 @@ class ResultRoute extends StatelessWidget {
                       style: TextStyle(
                           fontSize: 30,
                           fontWeight: FontWeight.bold,
-                          color: bmi <= 25 ? Colors.green : Colors.red),
+                          color:
+                              bmi <= 25 && bmi > 0 ? Colors.green : Colors.red),
                     ),
                   ],
                 ),
